@@ -1,6 +1,8 @@
 <h1>
     You can input here :</h1>
-<form action="">
-    <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea><br>
+<form method="POST" action="/counter">
+    {% csrf_token %}
+    <label for="text">Enter your text:</label><br>
+    <textarea name="text" id="text" cols="60" rows="10" title="Input your text here" placeholder="Type your text here..."></textarea><br>
     <input type="submit" value="Submit">
 </form>
